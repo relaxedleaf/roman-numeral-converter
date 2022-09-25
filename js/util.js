@@ -3,6 +3,10 @@
  * @returns {string}
  */
 const intToRoman = (num) => {
+	const ZERO = 'nulla';
+	if (!num) {
+		return ZERO;
+	}
 	const map = {
 		M: 1000,
 		CM: 900,

@@ -2,9 +2,12 @@ const integerInputEl = document.querySelector('#integerInput');
 const romanNumeralEl = document.querySelector('#romanNumeralInput');
 const converterFormEl = document.querySelector('.converter-form');
 const submitBtnEl = document.querySelector('.submit-btn');
+const loaderEl = document.querySelector('.loader');
 
-const ZERO = 'nulla';
-
+/**
+ * This function returns the current value in the integer input
+ * @return {number}
+ */
 const getIntegerValue = () => {
 	return +integerInputEl.value;
 };
@@ -17,14 +20,25 @@ const setRomanNumeral = (str) => {
 	romanNumeralEl.value = str;
 };
 
+const showElement = (el) => {
+	el.classList.remove('d-none');
+};
+
+const hideElemet = (el) => {
+	el.classList.add('d-none');
+};
+
 converterFormEl.addEventListener('submit', (evt) => {
 	evt.preventDefault();
 	const integerInputValue = getIntegerValue();
 
-	if (!integerInputValue) {
-		setRomanNumeral(ZERO);
-		return;
-	}
+	const result = intToRoman(integerInputValue);
+	hideElemet(submitBtnEl);
+	showElement(loaderEl);
 
-	setRomanNumeral(intToRoman(integerInputValue));
+	setTimeout(() => {
+		hideElemet(loaderEl);
+		showElement(submitBtnEl);
+		setRomanNumeral(result);
+	}, 1000);
 });

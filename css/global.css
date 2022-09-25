@@ -1,0 +1,9 @@
+:root {
+	--btn-width: 38px;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}

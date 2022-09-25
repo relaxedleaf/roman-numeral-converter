@@ -1,6 +1,10 @@
 .converter-form {
+	/* Display */
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translateX(-50%) translateY(-50%);
+
+	/* Border */
+	border: 1px solid var(--bs-gray-500);
 }
