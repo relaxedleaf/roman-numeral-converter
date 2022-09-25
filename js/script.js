@@ -20,14 +20,25 @@ const setRomanNumeral = (str) => {
 	romanNumeralEl.value = str;
 };
 
+/**
+ * This function adds d-none class to an element
+ * @param {Element} el
+ */
 const showElement = (el) => {
 	el.classList.remove('d-none');
 };
 
+/**
+ * This function removes d-none class from an element
+ * @param {Element} el
+ */
 const hideElemet = (el) => {
 	el.classList.add('d-none');
 };
 
+/**
+ * Handle onsubmit event
+ */
 converterFormEl.addEventListener('submit', (evt) => {
 	evt.preventDefault();
 	const integerInputValue = getIntegerValue();

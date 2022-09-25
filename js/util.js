@@ -1,4 +1,5 @@
 /**
+ * Converts integer to roman numeral string
  * @param {number} num
  * @returns {string}
  */
