@@ -1,9 +1,19 @@
 :root {
 	--btn-width: 38px;
+	--bg-dark: #11111c;
 }
 
 *,
 *::before,
 *::after {
 	box-sizing: border-box;
+}
+
+body.dark {
+	background-color: var(--bg-dark);
+}
+
+body.dark h3,
+body.dark label {
+	color: var(--bs-white);
 }

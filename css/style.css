@@ -12,7 +12,7 @@
 }
 
 @media (max-width: 576px) {
-	.converter-form {
+	.converter-form-wrapper {
 		min-width: 90%;
 	}
 }
