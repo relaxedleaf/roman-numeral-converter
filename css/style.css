@@ -8,3 +8,9 @@
 	/* Border */
 	border: 1px solid var(--bs-gray-500);
 }
+
+@media (max-width: 576px) {
+	.converter-form {
+		min-width: 90%;
+	}
+}
